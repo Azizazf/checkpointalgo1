@@ -1,0 +1,32 @@
+checkpoint.algo
+ ALGORITHM phrase
+
+ VAR   
+    // declaration des variables 
+    car : CHAR
+    longPhrase, nbreMots , nbreVoy : INTEGER
+    // initialisation des variables
+    longPhrase:= 0
+    nbreMots:= 1
+    nbreVoy :0
+ BEGIN  // debut de l'algorithme 
+     Write("Entrez une phrase") // afficher la phrase 
+     Read(car) // lire caractere 
+  WHILE (car[i] != "." ) DO // tant que chaque caractere de la phrase est different de "." ajoutons +1 à la longueur de phrase 
+      longPhrase := longPhrase + 1
+
+      IF (car[i] == " ")THEN // si caractere est un espace alors +1 au nombre de  mot
+      nbreMots := nbreMots + 1
+      END_IF
+
+      IF (car[i] == "a" or car[i] == "e" or car[i] == "i" or car[i] == "o" or car[i] == "u") THEN // si caractere est une voyelle alors +1 au nombre de voyelle 
+      nbreVoy := nbreVoy + 1
+      END_IF
+      i++
+  END_WHILE
+      // afficher 
+      Write("La longueur de la phrase est: ",longueur)
+      Write("Le nombre de mot dans la phrase est: ",nbreMots)
+      Write("le nombre de voyelle dans la phrase est: ",nbreVoy)
+
+ END
